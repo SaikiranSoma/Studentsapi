@@ -1,11 +1,15 @@
-﻿namespace StudentApi.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace StudentApi.Models
 {
     public class Student
     {
-       
-        public int Id { get; set; }
+        [Key]
+        public Guid Id { get; set; }=Guid.NewGuid();
 
-        public string Name { get; set; }
+        public string FirstName { get; set; } = "";
+
+        public string LastName { get; set; } = "";
 
         public int age {  get; set; }
 
